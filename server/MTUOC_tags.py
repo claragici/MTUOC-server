@@ -102,7 +102,6 @@ def detranslate_tags(targetTAGStrad,equiltags,equilattr):
 
 def remove_tags(segment):
     segmentnotags=re.sub('(<[^>]+>)', "",segment)
-    segmentnotags=re.sub('({[0-9]+})', "",segmentnotags)
     return(segmentnotags)
     
 def has_tags(segment):

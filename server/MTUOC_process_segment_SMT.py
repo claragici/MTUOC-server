@@ -16,7 +16,8 @@ def adapt_output(segment, joiner, bos_annotate=True, eos_annotate=True):
 
 def to_MT(segment, tokenizer, tcmodel):
     segmenttok=tokenizer.tokenize(segment)
-    segmenttrue=truecaser.truecase(tcmodel,tokenizer,segmenttok)
+    print(segmenttok)
+    segmenttrue=truecaser.truecase(tcmodel,segmenttok)
     segmentreplacenum=replace(segmenttrue)
     return(segmentreplacenum)
     
